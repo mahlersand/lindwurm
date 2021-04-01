@@ -1,8 +1,7 @@
-add_library(liblindwurm SHARED
-  lindwurm.cpp
-  lwcontext.cpp
+add_library(liblindwurm
+  context.cpp
 )
 
-target_include_directories(liblindwurm PRIVATE ../include)
+target_include_directories(liblindwurm PUBLIC ../include)
 
-target_compile_definitions(liblindwurm PUBLIC cxx_std_20)
+target_compile_features(liblindwurm PRIVATE cxx_std_20)
