@@ -1,6 +1,9 @@
-
+#include <lindwurm>
 
 int main(int argc, char *argv[])
 {
-  return 0;
+	LW::Context context;
+	context.registerDefaultBackends();
+
+	return 0;
 }

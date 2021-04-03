@@ -2,14 +2,14 @@ cmake_minimum_required(VERSION 3.19)
 include(FindPkgConfig)
 
 project(lindwurm
-    VERSION 0.0.0.1
-    DESCRIPTION "A modern low-level VPN")
+	VERSION 0.0.0.1
+	DESCRIPTION "A modern low-level VPN")
 
 #Boost asio
 find_package(Boost
-    1.75
-    REQUIRED
-    COMPONENTS system)
+	1.75
+	REQUIRED
+	COMPONENTS system)
 
 #Pybind
 find_package(pybind11 REQUIRED)

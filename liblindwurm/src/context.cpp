@@ -5,20 +5,7 @@ LW::Context::Context()
 
 }
 
-template<LW::backends::AuthenticationBackend Backend>
-bool LW::Context::registerAuthenticationBackend()
+void LW::Context::registerDefaultBackends()
 {
-
-}
-
-template<LW::backends::TransportBackend Backend>
-bool LW::Context::registerTransportBackend()
-{
-
-}
-
-template<LW::backends::TunnelBackend Backend>
-bool LW::Context::registerTunnelBackend()
-{
-
+	return;
 }
