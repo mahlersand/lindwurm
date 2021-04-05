@@ -2,14 +2,14 @@ set(LIBLINDWURM_SOURCE
 	context.cpp
 )
 
-add_library(liblindwurm
+add_library(lindwurm
 	${LIBLINDWURM_SOURCE}
 )
 
-#pybind11_add_module(lindwurm_python SHARED
-#	${LIBLINDWURM_SOURCE}
-#)
+target_include_directories(lindwurm PUBLIC ../include)
 
-target_include_directories(liblindwurm PUBLIC ../include)
+target_compile_features(lindwurm PUBLIC cxx_std_20)
 
-target_compile_features(liblindwurm PUBLIC cxx_std_20)
+target_link_libraries(lindwurm PUBLIC wireguard-linux)
+
+target_link_libraries(lindwurm PUBLIC libldap)
