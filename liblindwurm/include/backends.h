@@ -6,7 +6,7 @@
 namespace LW {
 	namespace backends {
 		template <typename T>
-		concept Backend = requires
+		concept Backend = requires (T instance)
 		{
 			//! The common name of the backend
 			{ T::cname() } -> std::same_as<std::string>;
@@ -16,21 +16,27 @@ namespace LW {
 		};
 
 		template<typename T>
-		concept AuthenticationBackend =
-		requires {
-			Backend<T>;
+		concept AuthenticationBackend = requires (T instance)
+		{
+			requires Backend<T>;
 		};
 
 		template<typename T>
-		concept TransportBackend =
-		requires {
-			Backend<T>;
+		concept ControlBackend = requires
+		{
+			requires Backend<T>;
 		};
 
 		template<typename T>
-		concept TunnelBackend =
-		requires {
-			Backend<T>;
+		concept TransportBackend = requires
+		{
+			requires Backend<T>;
+		};
+
+		template<typename T>
+		concept TunnelBackend = requires
+		{
+			requires Backend<T>;
 		};
 	}
 }
