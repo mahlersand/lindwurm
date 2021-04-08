@@ -1,14 +1,13 @@
 #pragma once
 
 #include <string>
-#include <boost/asio/ip/tcp.hpp>
+#include <LDAPAsynConnection.h>
 
 namespace LW::backends {
-	class TLSControlBackend {
-		boost::asio::io_context asio_context;
-
+	class LDAPAuthenticationBackend
+	{
 	public:
-		TLSControlBackend();
+		LDAPAuthenticationBackend();
 
 		static std::string cname();
 		static std::string version();

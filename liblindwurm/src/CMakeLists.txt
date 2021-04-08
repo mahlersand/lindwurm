@@ -1,6 +1,7 @@
 set(LIBLINDWURM_SOURCE
 	context.cpp
 	backends/TLSControlBackend.cpp
+	backends/LDAPAuthenticationBackend.cpp
 )
 
 set(LIBLINDWURM_HEADERS
