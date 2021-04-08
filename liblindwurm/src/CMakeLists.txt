@@ -18,5 +18,6 @@ target_compile_features(lindwurm PUBLIC cxx_std_20)
 
 target_link_libraries(lindwurm PRIVATE wireguard-linux)
 target_link_libraries(lindwurm PRIVATE libldap)
+target_link_libraries(lindwurm PRIVATE libldapc++)
 target_link_libraries(lindwurm PRIVATE Boost::system)
 target_link_libraries(lindwurm PRIVATE pthread)
