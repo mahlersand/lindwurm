@@ -1,5 +1,4 @@
-#ifndef CONTEXT_H
-#define CONTEXT_H
+#pragma once
 
 #include "backends.h"
 #include "liblindwurm_global.h"
@@ -56,5 +55,3 @@ namespace LW {
 		return false;
 	}
 }
-
-#endif // CONTEXT_H

@@ -1,5 +1,4 @@
-#ifndef LIBLINDWURM_GLOBAL_H
-#define LIBLINDWURM_GLOBAL_H
+#pragma once
 
 //Qt Exports
 //They are just in here if they are needed #l8ter
@@ -16,5 +15,3 @@
 #else
 #  define LIBLINDWURM_EXPORT Q_DECL_IMPORT
 #endif
-
-#endif // LIBLINDWURM_GLOBAL_H
