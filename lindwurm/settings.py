@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lindwurm_ca.apps.LindwurmCaConfig',
+    'django_x509',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,19 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'lindwurm.wsgi.application'
+
+# Auth Backend
+
+AUTHENTICATION_BACKENDS = (
+    'django_auth_ldap3.backends.LDAPBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+# LDAP Configuration
+AUTH_LDAP_URI = 'ldap://eichler.ovh:389'
+AUTH_LDAP_BASE_DN = 'ou=People,dc=eicher,dc=org'
+
+AUTH_LDAP_BIND_TEMPLATE = "uid={username},{base_dn}"
 
 
 # Database
@@ -120,3 +134,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "static/img",
+    "static/css",
+]
+
+
+LOGIN_REDIRECT_URL = "/"
+
+LOGIN_URL = "/accounts/login"
