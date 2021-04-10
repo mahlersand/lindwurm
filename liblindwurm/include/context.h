@@ -33,7 +33,7 @@ namespace LW {
 
 
 	template<LW::backends::AuthenticationBackend Backend>
-	inline bool registerAuthenticationBackend()
+	inline bool Context::registerAuthenticationBackend()
 	{
 		return false;
 	}
