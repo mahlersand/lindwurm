@@ -37,12 +37,12 @@ target_include_directories(libldap
 )
 
 #openldapc++
-add_library(libldapc++ STATIC IMPORTED GLOBAL)
+add_library(ldapc++ STATIC IMPORTED GLOBAL)
 set_property(
-	TARGET libldapc++
+        TARGET ldapc++
 	PROPERTY IMPORTED_LOCATION "${LIBLDAPCPP_INSTALL_PATH}/lib/libldapcpp.a"
 )
-target_include_directories(libldapc++
+target_include_directories(ldapc++
 	INTERFACE "${LIBLDAPCPP_INSTALL_PATH}/include"
 )
 
