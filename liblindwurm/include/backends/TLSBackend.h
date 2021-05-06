@@ -4,11 +4,12 @@
 #include <boost/asio/ip/tcp.hpp>
 
 namespace LW::backends {
-	class TLSControlBackend {
+	class TLSBackend
+	{
 		boost::asio::io_context asio_context;
 
 	public:
-		TLSControlBackend();
+		TLSBackend();
 
 		static std::string cname();
 		static std::string version();

@@ -2,7 +2,7 @@
 
 #include <backends.h>
 #include <liblindwurm_global.h>
-#include <backends/TLSControlBackend.h>
+#include <backends/TLSBackend.h>
 #include <backends/LDAPAuthenticationBackend.h>
 
 #include <filesystem>

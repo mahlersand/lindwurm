@@ -1,4 +1,11 @@
 #pragma once
 
-#include <backends.h>
+#include <liblindwurm_global.h>
+
 #include <context.h>
+#include <instance.h>
+#include <hub.h>
+
+#include <backends.h>
+#include <backends/TLSBackend.h>
+#include <backends/LDAPAuthenticationBackend.h>
