@@ -1,9 +1,9 @@
 #pragma once
 
-#include <backends.h>
+#include <backend/concepts.h>
 #include <liblindwurm_global.h>
-#include <backends/TLSBackend.h>
-#include <backends/LDAPAuthenticationBackend.h>
+#include <TLSBackend.h>
+#include <LDAPAuthenticationBackend.h>
 
 #include <filesystem>
 

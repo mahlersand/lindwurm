@@ -3,15 +3,13 @@
 #include <string>
 #include <type_traits>
 
+#include <backend/BackendBase.h>
+
 namespace LW::backends {
 	template <typename T>
 	concept Backend = requires (T instance)
 	{
-	    //! The common name of the backend
-	    { T::cname() } -> std::same_as<std::string>;
-
-	    //! Version information about the backend
-	    { T::version() } -> std::same_as<std::string>;
+	    requires std::is_base_of_v<LW::backend::BackendBase, T>;
     };
 
 	/*!
