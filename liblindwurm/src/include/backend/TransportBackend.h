@@ -5,7 +5,8 @@
 namespace LW::backend {
 	class TransportBackend;
 
-	class TransportBackend : public LW::backend::BackendBase
+	class TransportBackend :
+	        public LW::backend::BackendBase
 	{
 
 	};

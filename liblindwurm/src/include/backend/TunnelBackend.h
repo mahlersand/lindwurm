@@ -5,7 +5,8 @@
 namespace LW::backend {
 	class TunnelBackend;
 
-	class TunnelBackend : public LW::backend::BackendBase
+	class TunnelBackend :
+	        public LW::backend::BackendBase
 	{
 
 	};

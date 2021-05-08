@@ -5,7 +5,8 @@
 namespace LW::backend {
 	class ControlBackend;
 
-	class ControlBackend : public LW::backend::BackendBase
+	class ControlBackend :
+	        public LW::backend::BackendBase
 	{
 
 	};

@@ -9,7 +9,7 @@ target_compile_features(lwbackends
 )
 
 target_include_directories(lwbackends
-	INTERFACE .
+	PUBLIC .
 )
 
 target_link_libraries(lwbackends

@@ -4,8 +4,12 @@
 #include <type_traits>
 
 #include <backend/BackendBase.h>
+#include <backend/AuthenticationBackend.h>
+#include <backend/ControlBackend.h>
+#include <backend/TransportBackend.h>
+#include <backend/TunnelBackend.h>
 
-namespace LW::backends {
+namespace LW::concepts {
 	template <typename T>
 	concept Backend = requires (T instance)
 	{
@@ -21,7 +25,7 @@ namespace LW::backends {
 	template<typename T>
 	concept AuthenticationBackend = requires (T instance)
 	{
-	    requires Backend<T>;
+	    requires std::is_base_of_v<LW::backend::AuthenticationBackend, T>;
     };
 
 	/*!
@@ -33,7 +37,7 @@ namespace LW::backends {
 	template<typename T>
 	concept ControlBackend = requires
 	{
-	    requires Backend<T>;
+	    requires std::is_base_of_v<LW::backend::ControlBackend, T>;
     };
 
 	/*!
@@ -43,7 +47,7 @@ namespace LW::backends {
 	template<typename T>
 	concept TransportBackend = requires
 	{
-	    requires Backend<T>;
+	    requires std::is_base_of_v<LW::backend::TransportBackend, T>;
     };
 
 	/*!

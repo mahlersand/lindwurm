@@ -5,7 +5,8 @@
 namespace LW::backend {
 	class AuthenticationBackend;
 
-	class AuthenticationBackend : public LW::backend::BackendBase
+	class AuthenticationBackend :
+	        public LW::backend::BackendBase
 	{
 
 	};

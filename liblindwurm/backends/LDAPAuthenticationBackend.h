@@ -5,7 +5,7 @@
 
 #include <backend/AuthenticationBackend.h>
 
-namespace LW::backends {
+namespace LW::InternalBackends {
 	class LDAPAuthenticationBackend :
 	      public LW::backend::AuthenticationBackend
 	{

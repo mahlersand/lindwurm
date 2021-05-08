@@ -17,4 +17,3 @@ target_link_libraries(lindwurm
 	PUBLIC lwcore
 	PUBLIC lwbackends
 )
-

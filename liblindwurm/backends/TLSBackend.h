@@ -6,7 +6,7 @@
 #include <backend/AuthenticationBackend.h>
 #include <backend/ControlBackend.h>
 
-namespace LW::backends {
+namespace LW::InternalBackends {
 	using std::string;
 
 	class TLSBackend :

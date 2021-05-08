@@ -7,12 +7,12 @@ LW::Context::Context()
 
 void LW::Context::registerDefaultBackends()
 {
-	if(!registerControlBackend<LW::backends::TLSBackend>())
+	if(!registerControlBackend<LW::InternalBackends::TLSBackend>())
 	{
 		printf("Failed to register default Control Backend \n");
 	}
 
-	if(!registerAuthenticationBackend<LW::backends::LDAPAuthenticationBackend>())
+	if(!registerAuthenticationBackend<LW::InternalBackends::LDAPAuthenticationBackend>())
 	{
 		printf("Failed to register default Authentication Backend \n");
 	}
@@ -22,6 +22,6 @@ void LW::Context::registerDefaultBackends()
 
 void LW::Context::demo()
 {
-	LW::backends::TLSBackend tls_backend;
-	LW::backends::LDAPAuthenticationBackend ldap_backend;
+	LW::InternalBackends::TLSBackend tls_backend;
+	LW::InternalBackends::LDAPAuthenticationBackend ldap_backend;
 }
