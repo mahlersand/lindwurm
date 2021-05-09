@@ -1,0 +1,6 @@
+[submodule "liblindwurm/external/wireguard-tools"]
+	path = liblindwurm/external/wireguard-tools
+	url = https://git.zx2c4.com/wireguard-tools
+[submodule "liblindwurm/external/wireguard-windows"]
+	path = liblindwurm/external/wireguard-windows
+	url = https://git.zx2c4.com/wireguard-windows
