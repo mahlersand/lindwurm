@@ -14,13 +14,16 @@ set(LWHeadersApi
 )
 
 set(LWHeadersPrivate
-
+	include/detail/router.h
+	include/detail/endpoint.h
 )
 
 set(LWCoreSources
 	context.cpp
 	instance.cpp
 	hub.cpp
+	detail/router.cpp
+	detail/endpoint.cpp
 )
 
 
