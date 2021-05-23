@@ -17,6 +17,7 @@ namespace LW::InternalBackends {
 
 	public:
 		TLSBackend();
+		virtual ~TLSBackend();
 
 		virtual string cname() const;
 		virtual string version() const;

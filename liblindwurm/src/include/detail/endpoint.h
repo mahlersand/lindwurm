@@ -9,6 +9,6 @@ namespace LW::detail {
 
 	class Endpoint
 	{
-
+		boost::asio::ip::address address;
 	}; //Endpoint
 } //LW::detail

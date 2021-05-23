@@ -5,6 +5,11 @@ LW::InternalBackends::LDAPAuthenticationBackend::LDAPAuthenticationBackend()
 	LDAPAsynConnection connection;
 }
 
+LW::InternalBackends::LDAPAuthenticationBackend::~LDAPAuthenticationBackend()
+{
+
+}
+
 std::string LW::InternalBackends::LDAPAuthenticationBackend::cname() const
 {
 	return "lw.auth.ldap";

@@ -8,6 +8,7 @@ namespace LW::backend {
 	class TunnelBackend :
 	        public LW::backend::BackendBase
 	{
-
+	public:
+		virtual ~TunnelBackend();
 	};
 }

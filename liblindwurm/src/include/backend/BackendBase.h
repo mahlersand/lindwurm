@@ -10,8 +10,10 @@ namespace LW::backend {
 	class BackendBase;
 
 	class BackendBase {
-
+		ptree settings;
 	public:
+		virtual ~BackendBase();
+
 		//! The common name of the backend
 		virtual string cname() const = 0;
 

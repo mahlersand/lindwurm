@@ -7,6 +7,11 @@ LW::InternalBackends::TLSBackend::TLSBackend() :
 
 }
 
+LW::InternalBackends::TLSBackend::~TLSBackend()
+{
+
+}
+
 std::string LW::InternalBackends::TLSBackend::cname() const
 {
 	return "lw.tls";

@@ -8,6 +8,7 @@ namespace LW::backend {
 	class TransportBackend :
 	        public LW::backend::BackendBase
 	{
-
+	public:
+		virtual ~TransportBackend();
 	};
 }

@@ -11,6 +11,7 @@ namespace LW::InternalBackends {
 	{
 	public:
 		LDAPAuthenticationBackend();
+		virtual ~LDAPAuthenticationBackend();
 
 		virtual std::string cname() const;
 		virtual std::string version() const;

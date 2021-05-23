@@ -8,6 +8,7 @@ namespace LW::backend {
 	class AuthenticationBackend :
 	        public LW::backend::BackendBase
 	{
-
+	public:
+		virtual ~AuthenticationBackend();
 	};
 }

@@ -8,6 +8,7 @@ namespace LW::backend {
 	class ControlBackend :
 	        public LW::backend::BackendBase
 	{
-
+	public:
+		virtual ~ControlBackend();
 	};
 }

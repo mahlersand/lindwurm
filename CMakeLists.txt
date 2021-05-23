@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 include(FindPkgConfig)
+include(FetchContent)
 
 project(lindwurm
 	VERSION 0.0.0.1

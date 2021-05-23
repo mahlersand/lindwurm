@@ -11,6 +11,7 @@ set(LWHeadersApi
 	include/backend/ControlBackend.h
 	include/backend/TransportBackend.h
 	include/backend/TunnelBackend.h
+	include/config/config.h
 )
 
 set(LWHeadersPrivate
@@ -24,6 +25,11 @@ set(LWCoreSources
 	hub.cpp
 	detail/router.cpp
 	detail/endpoint.cpp
+	backend/BackendBase.cpp
+	backend/AuthenticationBackend.cpp
+	backend/ControlBackend.cpp
+	backend/TransportBackend.cpp
+	backend/TunnelBackend.cpp
 )
 
 
